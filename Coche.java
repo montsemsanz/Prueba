@@ -1,5 +1,5 @@
 /**
- * Esta clase representa a un coche.
+ * La clase representa a un coche.
  * 
  */
 public class Coche
