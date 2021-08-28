@@ -2,83 +2,83 @@
  * La clase representa a un coche.
  * 
  */
-public class Coche
-{
+public class Coche {
     private String modelo; // Ford Focus, Citroen X-Sara, ...
     private String color;
     private int numeroPuertas;
-    private int año;
+    private int aÃ±o;
 
     /**
      * Constructor para los objetos de la clase Coche.
-     * @param  queModelo el modelo del coche
-     * @param  queColor el color del coche
-     * @param  queAño el año de fabricación del coche
+     * 
+     * @param queModelo el modelo del coche
+     * @param queColor  el color del coche
+     * @param queAÃ±o    el aÃ±o de fabricaciÃ³n del coche
      * 
      */
-    public Coche(String queModelo, String queColor, int queAño, int cuantasPuertas)   {
+    public Coche(String queModelo, String queColor, int queAÃ±o, int cuantasPuertas) {
         modelo = queModelo;
         color = queColor;
-        año = queAño;
+        aÃ±o = queAÃ±o;
         numeroPuertas = cuantasPuertas;
     }
 
     /**
      * cambiar el modelo del coche
-     *  
+     * 
      */
-    public void setModelo(String  queModelo)    {
+    public void setModelo(String queModelo) {
         modelo = queModelo;
-    }   
+    }
 
     /**
      * cambiar el color del coche
-     *  
+     * 
      */
-    public void setColor(String queColor)  {
+    public void setColor(String queColor) {
         color = queColor;
-    }     
+    }
 
     /**
-     * cambiar el año del coche
-     *  
+     * cambiar el anio del coche
+     * 
      */
-    public void setAño(int queAño)   {
-        año = queAño;
-    } 
+    public void setAÃ±o(int queAÃ±o) {
+        aÃ±o = queAÃ±o;
+    }
 
     /**
-     * visualizar la información del coche
+     * visualizar la informaciÃ³n del coche
      */
-    public void print()   {
-        System.out.println("Modelo " + modelo + "\nAño " + año + 
-            "\nColor " + color + "\nPuertas " + numeroPuertas + ".");
-    }    
+    public void print() {
+        System.out
+                .println("Modelo " + modelo + "\nAÃ±o " + aÃ±o + "\nColor " + color + "\nPuertas " + numeroPuertas + ".");
+    }
 
     /**
      * devolver el modelo del coche
-     *  
+     * 
      */
-    public String getModelo()   { 
+    public String getModelo() {
         return modelo;
     }
 
     /**
      * devolver el color del coche
-     *  
+     * 
      */
-    public String getColor()  { 
+    public String getColor() {
         return color;
     }
 
     /**
-     * devolver el año del coche
-     *  
+     * devolver el aÃ±o del coche
+     * 
      */
-    public int getAño()   { 
-        return año;
+    public int getAÃ±o() {
+        return aÃ±o;
     }
-    
+
     /**
      * 
      */
@@ -89,16 +89,18 @@ public class Coche
     /**
      * 
      *
-     * @param  unCoche el coche a comparar con el actual
-     * @return true si los coches que se comparan son iguales   
+     * @param unCoche el coche a comparar con el actual
+     * @return true si los coches que se comparan son iguales
      */
-    public boolean igualQue(Coche unCoche)   {
+    public boolean igualQue(Coche unCoche) {
 
-        return this.modelo.equals(unCoche.getModelo()) &&
-            this.color.equals(unCoche.getColor()) &&
-            this.año == unCoche.getAño() &&
-            this.numeroPuertas == unCoche.getPuertas();
+        return this.modelo.equals(unCoche.getModelo()) && this.color.equals(unCoche.getColor())
+                && this.aÃ±o == unCoche.getAÃ±o() && this.numeroPuertas == unCoche.getPuertas();
     }
 
+    public static void main(String[] args) {
+        Coche coche1 = new Coche("Hyundai", "Blanco", 2019, 5);
+        coche1.print();
+    }
 
 }
